@@ -29,11 +29,16 @@ body {
 
     display: grid;
     place-items: center;
-    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-evenly;
+    grid-template-columns: repeat(2, auto);
 }
 
-#sounds {
+#timer {
+    text-align: center;
+}
+
+#card-sound {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, auto);
     gap: 3.2rem;
 }
