@@ -2,13 +2,38 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'roboto', sans-serif;
 }
 
 :root {
     --bg-color: #e5e5e5;
-    --bg-card-active: #02799d;
+    --bg-cardsound-active-color: #02799d;
+    --icon-color: #323238;
+    --bg-layout-color: #fff;
+
+    font-size: 62.5%;
 }
 
 body {
     background-color: var(--bg-color);
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+#app {
+    background-color: var(--bg-layout-color);
+    border-radius: 0.5rem;
+    width: 128rem;
+    height: 72rem;
+
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#sounds {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.2rem;
 }
