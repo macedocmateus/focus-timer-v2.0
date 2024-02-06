@@ -35,6 +35,27 @@ body {
 
 #timer {
     text-align: center;
+
+    font-size: 12.6rem;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    color: var(--icon-color);
+}
+
+#controls {
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#controls button {
+    background-color: transparent;
+    border: none;
+    color: var(--icon-color);
+    font-size: 4.8rem;
+    cursor: pointer;
 }
 
 #card-sound {
