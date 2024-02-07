@@ -6,12 +6,30 @@
 }
 
 :root {
-    --bg-color: #e5e5e5;
-    --bg-cardsound-active-color: #02799d;
-    --icon-color: #323238;
+    --bg-color: #dbdbdb;
     --bg-layout-color: #fff;
+    --bg-card-color: #e1e1e6;
+    --button-color: #323238;
+    --selected-control-color: #02799d;
+    --actived-soundcard-color: #02799d;
+    --actived-soundcard-icon-color: #fff;
 
     font-size: 62.5%;
+}
+
+html.darkmode {
+    --bg-color: #1e1e1e;
+    --bg-layout-color: #252526;
+    --bg-card-color: #2d2d30;
+    --button-color: #ececec;
+    --selected-control-color: #02799d;
+    --actived-soundcard-color: #02799d;
+    --actived-soundcard-icon-color: #fff;
+}
+
+html.darkmode .ph-moon,
+html:not(.darkmode) .ph-sun {
+    display: none;
 }
 
 body {
@@ -22,6 +40,7 @@ body {
 }
 
 #app {
+    position: relative;
     background-color: var(--bg-layout-color);
     border-radius: 0.5rem;
     width: 128rem;
@@ -33,27 +52,50 @@ body {
     grid-template-columns: repeat(2, auto);
 }
 
+#toggle-mode {
+    position: absolute;
+    right: 3.2rem;
+    top: 3.2rem;
+    line-height: 0;
+    border: none;
+    background-color: transparent;
+    color: var(--button-color);
+    font-size: 3.2rem;
+    cursor: pointer;
+}
+
+.screen-reader-only {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    overflow: hidden;
+
+    margin: -1px;
+    padding: 0px;
+    border: 0;
+    appearance: none;
+}
+
 #timer {
     text-align: center;
-
     font-size: 12.6rem;
     font-weight: 500;
     line-height: normal;
     text-transform: uppercase;
-    color: var(--icon-color);
+    color: var(--button-color);
 }
 
 #controls {
     display: flex;
     gap: 4rem;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 
 #controls button {
     background-color: transparent;
     border: none;
-    color: var(--icon-color);
+    color: var(--button-color);
     font-size: 4.8rem;
     cursor: pointer;
 }
@@ -62,4 +104,24 @@ body {
     display: grid;
     grid-template-columns: repeat(2, auto);
     gap: 3.2rem;
+}
+
+#card button {
+    width: 13.8rem;
+    height: 15.2rem;
+    border: none;
+    border-radius: 2.4rem;
+    background-color: var(--bg-card-color);
+    font-size: 6.8rem;
+    color: var(--button-color);
+    cursor: pointer;
+}
+
+.selected-card {
+    background-color: var(--actived-soundcard-color);
+    color: var(--actived-soundcard-icon-color);
+}
+
+.selected-control-button {
+    color: var(--selected-control-color);
 }
