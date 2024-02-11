@@ -12,6 +12,6 @@ export function toggleReset() {
     document.documentElement.classList.remove('running');
     timer.updateDisplay();
 }
-export function SetVolumeUp() {}
+export function SetIncrement() {}
 
-export function SetVolumeDown() {}
+export function SetDecrement() {}
