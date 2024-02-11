@@ -1,9 +1,14 @@
+import state from './state.js';
+import * as timer from './timer.js';
+
 export function toggleRunning() {
-    console.log('toggleRunning function');
+    state.isRunning = document.documentElement.classList.toggle('running');
+    timer.countdown();
 }
 
 export function toggleReset() {
-    console.log('toggleReset function');
+    state.isRunning = false;
+    document.documentElement.classList.remove('running');
 }
 export function SetVolumeUp() {
     console.log('volume up function');
