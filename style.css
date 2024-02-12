@@ -121,7 +121,3 @@ body {
     background-color: var(--actived-soundcard-color);
     color: var(--actived-soundcard-icon-color);
 }
-
-.selected-control-button {
-    color: var(--selected-control-color);
-}
