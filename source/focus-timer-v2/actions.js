@@ -15,6 +15,12 @@ export function toggleReset() {
     document.documentElement.classList.remove('running');
     timer.updateDisplay();
 }
-export function SetIncrement() {}
+export function SetIncrement() {
+    state.isRunning = false;
+    timer.incrementMinute();
+}
 
-export function SetDecrement() {}
+export function SetDecrement() {
+    state.isRunning = false;
+    timer.decrementMinute();
+}

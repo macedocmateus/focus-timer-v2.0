@@ -33,3 +33,23 @@ export function countdown() {
 
     setTimeout(() => countdown(), 1000);
 }
+
+export function incrementMinute() {
+    let minutes = Number(element.minutes.textContent);
+
+    minutes += 5;
+
+    updateDisplay(minutes);
+}
+
+export function decrementMinute() {
+    let minutes = Number(element.minutes.textContent);
+
+    if (minutes < 0) {
+        return (minutes = 0);
+    }
+
+    minutes -= 5;
+
+    updateDisplay(minutes);
+}
