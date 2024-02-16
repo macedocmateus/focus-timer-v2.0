@@ -45,7 +45,7 @@ export function incrementMinute() {
 export function decrementMinute() {
     let minutes = Number(element.minutes.textContent);
 
-    if (minutes < 0) {
+    if (minutes <= 0) {
         return (minutes = 0);
     }
 

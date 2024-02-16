@@ -5,9 +5,8 @@ import * as sounds from './sounds.js';
 
 export function toggleRunning() {
     state.isRunning = document.documentElement.classList.toggle('running');
-    timer.countdown();
-
     sounds.buttonAudio.play();
+    timer.countdown();
 }
 
 export function toggleReset() {
