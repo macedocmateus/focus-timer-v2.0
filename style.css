@@ -116,7 +116,3 @@ body {
     color: var(--button-color);
     cursor: pointer;
 }
-
-.selected-button-control {
-    color: var(--selected-control-color);
-}
