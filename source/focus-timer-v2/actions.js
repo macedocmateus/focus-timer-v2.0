@@ -9,17 +9,15 @@ export function toggleRunning() {
     timer.countdown();
 }
 
-export function toggleReset() {
+export function reset() {
     state.isRunning = false;
     document.documentElement.classList.remove('running');
     timer.updateDisplay();
 }
 export function SetIncrement() {
-    state.isRunning = false;
     timer.incrementMinute();
 }
 
 export function SetDecrement() {
-    state.isRunning = false;
     timer.decrementMinute();
 }

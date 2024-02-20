@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="running">
+<html lang="pt-br">
     <head>
         <link
             href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic"
@@ -28,12 +28,12 @@
 
                 <section id="controls">
                     <button
-                        class="ph ph-play-circle"
+                        class="ph ph-play-circle selected-button-control"
                         data-action="toggleRunning"
                     ></button>
                     <button
-                        class="ph ph-stop-circle"
-                        data-action="toggleReset"
+                        class="ph ph-stop-circle selected-button-control"
+                        data-action="reset"
                     ></button>
                     <button
                         class="ph ph-plus-circle"
@@ -49,19 +49,31 @@
             <div class="cards">
                 <section id="card-sound">
                     <div id="card">
-                        <button class="ph ph-tree"></button>
+                        <button
+                            class="ph ph-tree"
+                            data-action="toggleMusic"
+                        ></button>
                     </div>
 
                     <div id="card">
-                        <button class="ph ph-cloud-rain"></button>
+                        <button
+                            class="ph ph-cloud-rain"
+                            data-action="toggleMusic"
+                        ></button>
                     </div>
 
                     <div id="card">
-                        <button class="ph ph-storefront"></button>
+                        <button
+                            class="ph ph-storefront"
+                            data-action="toggleMusic"
+                        ></button>
                     </div>
 
                     <div id="card">
-                        <button class="ph ph-flame"></button>
+                        <button
+                            class="ph ph-flame"
+                            data-action="toggleMusic"
+                        ></button>
                     </div>
                 </section>
             </div>

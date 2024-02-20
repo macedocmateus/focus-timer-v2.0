@@ -117,7 +117,6 @@ body {
     cursor: pointer;
 }
 
-.selected-card {
-    background-color: var(--actived-soundcard-color);
-    color: var(--actived-soundcard-icon-color);
+.selected-button-control {
+    color: var(--selected-control-color);
 }

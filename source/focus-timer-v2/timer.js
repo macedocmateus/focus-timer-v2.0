@@ -1,6 +1,6 @@
 import state from './state.js';
 import * as element from './elements.js';
-import { toggleReset } from './actions.js';
+import { reset } from './actions.js';
 export function updateDisplay(minutes, seconds) {
     minutes = minutes ?? state.minutes;
     seconds = seconds ?? state.seconds;
@@ -25,7 +25,7 @@ export function countdown() {
     }
 
     if (minutes < 0) {
-        toggleReset();
+        reset();
         return;
     }
 
