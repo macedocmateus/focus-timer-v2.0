@@ -30,38 +30,56 @@
                     <button
                         class="ph ph-play-circle"
                         data-action="toggleRunning"
-                    ></button>
-                    <button
-                        class="ph ph-stop-circle"
-                        data-action="reset"
-                    ></button>
+                    >
+                        <span class="screen-reader-only">botão play</span>
+                    </button>
+                    <button class="ph ph-stop-circle" data-action="reset">
+                        <span class="screen-reader-only">botão stop</span>
+                    </button>
                     <button
                         class="ph ph-plus-circle"
                         data-action="SetIncrement"
-                    ></button>
+                    >
+                        <span class="screen-reader-only"
+                            >botão aumentar 5 minutos</span
+                        >
+                    </button>
                     <button
                         class="ph ph-minus-circle"
                         data-action="SetDecrement"
-                    ></button>
+                    >
+                        <span class="screen-reader-only"
+                            >botão diminuir 5 minutos</span
+                        >
+                    </button>
                 </section>
             </div>
 
             <div class="cards">
                 <section id="card-sound">
                     <div id="card">
-                        <button class="ph ph-tree"></button>
+                        <button class="ph ph-tree" data-sounds="tree"></button>
                     </div>
 
                     <div id="card">
-                        <button class="ph ph-cloud-rain"></button>
+                        <button
+                            class="ph ph-cloud-rain"
+                            data-sounds="cloudrain"
+                        ></button>
                     </div>
 
                     <div id="card">
-                        <button class="ph ph-storefront"></button>
+                        <button
+                            class="ph ph-storefront"
+                            data-sounds="storefront"
+                        ></button>
                     </div>
 
                     <div id="card">
-                        <button class="ph ph-flame"></button>
+                        <button
+                            class="ph ph-flame"
+                            data-sounds="flame"
+                        ></button>
                     </div>
                 </section>
             </div>
