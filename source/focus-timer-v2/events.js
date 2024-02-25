@@ -1,5 +1,6 @@
-import { controls } from './elements.js';
+import { controls, soundCard } from './elements.js';
 import * as actions from './actions.js';
+
 export function registerControls() {
     controls.addEventListener('click', (event) => {
         const action = event.target.dataset.action;
@@ -8,5 +9,16 @@ export function registerControls() {
         }
 
         actions[action]();
+    });
+}
+
+export function registerSoundCard() {
+    soundCard.addEventListener('click', (event) => {
+        const sound = event.target.dataset.sound;
+        if (typeof actions[sound] != 'function') {
+            return;
+        }
+
+        actions[sound]();
     });
 }

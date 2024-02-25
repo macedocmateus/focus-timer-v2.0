@@ -7,7 +7,13 @@
         />
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Focus Timer 2.0</title>
+        <meta name="description" content="Temporizador estilo pomodoro" />
+        <title>Focus Timer 2.0 - Pomodoro</title>
+        <link
+            rel="shortcut icon"
+            href="./assets/favicon.svg"
+            type="image/x-svh"
+        />
         <link rel="stylesheet" href="style.css" />
         <script src="https://unpkg.com/@phosphor-icons/web"></script>
         <script type="module" src="/source/main.js" defer></script>
@@ -28,17 +34,25 @@
 
                 <section id="controls">
                     <button
-                        class="ph ph-play-circle"
+                        class="ph ph-play-circle secundary-color-icon"
                         data-action="toggleRunning"
                     >
                         <span class="screen-reader-only">botão play</span>
                     </button>
-                    <button class="ph ph-stop-circle" data-action="reset">
+
+                    <button
+                        class="ph ph-pause-circle"
+                        data-action="toggleRunning"
+                    >
+                        <span class="screen-reader-only">botão pause</span>
+                    </button>
+
+                    <button class="ph ph-stop-circle" data-action="stop">
                         <span class="screen-reader-only">botão stop</span>
                     </button>
                     <button
                         class="ph ph-plus-circle"
-                        data-action="SetIncrement"
+                        data-action="setIncrement"
                     >
                         <span class="screen-reader-only"
                             >botão aumentar 5 minutos</span
@@ -46,7 +60,7 @@
                     </button>
                     <button
                         class="ph ph-minus-circle"
-                        data-action="SetDecrement"
+                        data-action="setDecrement"
                     >
                         <span class="screen-reader-only"
                             >botão diminuir 5 minutos</span
@@ -56,30 +70,30 @@
             </div>
 
             <div class="cards">
-                <section id="card-sound">
+                <section id="sound-card">
                     <div id="card">
-                        <button class="ph ph-tree" data-sounds="tree"></button>
+                        <button
+                            class="ph ph-tree secondary-color-icon secundary-color-icon"
+                            data-sound="tree"
+                        ></button>
                     </div>
 
                     <div id="card">
                         <button
                             class="ph ph-cloud-rain"
-                            data-sounds="cloudrain"
+                            data-sound="rain"
                         ></button>
                     </div>
 
                     <div id="card">
                         <button
                             class="ph ph-storefront"
-                            data-sounds="storefront"
+                            data-sound="storefront"
                         ></button>
                     </div>
 
                     <div id="card">
-                        <button
-                            class="ph ph-flame"
-                            data-sounds="flame"
-                        ></button>
+                        <button class="ph ph-flame" data-sound="flame"></button>
                     </div>
                 </section>
             </div>
