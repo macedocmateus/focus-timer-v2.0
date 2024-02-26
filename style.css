@@ -28,8 +28,7 @@ html:not(.darkmode) .ph-sun {
 }
 
 .running .ph-play-circle,
-html:not(.running) .ph-pause-circle,
-html:not(.running) .ph-stop-circle {
+html:not(.running) .ph-pause-circle {
     display: none;
 }
 
