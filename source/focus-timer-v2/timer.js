@@ -28,10 +28,34 @@ export function countdown() {
 
     setTimeout(() => countdown(), 1000);
 }
+//TODO: fazer a função de incrementar 5 minutos e a função de decrementar 5 minutos
+export function incrementMinutes() {
+    if (state.isRunning == true) {
+        return;
+    }
 
-export function incrementMinutes() {}
+    let minutes = Number(elements.minutes.textContent);
 
-export function decrementMinutes() {}
+    minutes += 5;
+
+    updateDisplay(minutes);
+}
+
+export function decrementMinutes() {
+    if (state.isRunning == true) {
+        return;
+    }
+
+    let minutes = Number(elements.minutes.textContent);
+
+    minutes -= 5;
+
+    if (minutes < 0) {
+        return;
+    }
+
+    updateDisplay(minutes);
+}
 
 export function updateDisplay(minutes, seconds) {
     minutes = minutes ?? state.minutes;
