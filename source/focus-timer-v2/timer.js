@@ -4,6 +4,8 @@ import { stop } from './actions.js';
 import { kitchenTimer } from './sounds.js';
 
 export function countdown() {
+    clearTimeout(state.countDownId);
+
     if (!state.isRunning) {
         return;
     }
@@ -26,9 +28,9 @@ export function countdown() {
 
     updateDisplay(minutes, seconds);
 
-    setTimeout(() => countdown(), 1000);
+    state.countDownId = setTimeout(() => countdown(), 1000);
 }
-//TODO: fazer a função de incrementar 5 minutos e a função de decrementar 5 minutos
+
 export function incrementMinutes() {
     if (state.isRunning == true) {
         return;
