@@ -10,7 +10,8 @@
     --bg-layout-color: #fff;
     --bg-card-color: #e1e1e6;
     --button-color: #323238;
-    --secundary-color-icon: #7087f0;
+    --bg-card-color-actived: #16e220;
+    --icon-color-actived: #d87314;
 
     font-size: 62.5%;
 }
@@ -20,6 +21,8 @@ html.darkmode {
     --bg-layout-color: #252526;
     --bg-card-color: #2d2d30;
     --button-color: #ececec;
+    --bg-card-color-actived: #af1616;
+    --icon-color-actived: #3312c4;
 }
 
 html.darkmode .ph-moon,
@@ -117,6 +120,8 @@ body {
     cursor: pointer;
 }
 
-.secondary-color-icon {
-    background-color: var(--secundary-color-icon);
+#card button.cor2 {
+    background-color: var(--bg-card-color-actived);
+
+    color: var(--icon-color-actived);
 }
