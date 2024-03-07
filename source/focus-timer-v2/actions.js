@@ -1,7 +1,13 @@
 import state from './state.js';
 import * as timer from './timer.js';
 import * as sounds from './sounds.js';
-import { cards, treeIcon, rainIcon } from './elements.js';
+import {
+    cards,
+    treeIcon,
+    rainIcon,
+    storeFrontIcon,
+    flameIcon,
+} from './elements.js';
 export function toggleRunning() {
     state.isRunning = document.documentElement.classList.toggle('running');
     timer.countdown();
@@ -22,17 +28,34 @@ export function setDecrement() {
 }
 
 export function tree() {
-    console.log('tree esta funcionando');
+    if (state.isMute == false) {
+        sounds.florest.pause();
+        return;
+    }
 
-    treeIcon.classList.toggle('cor2');
+    sounds.florest.play();
+    sounds.rain.pause();
+    sounds.storefront.pause();
+    sounds.flame.pause();
 }
 export function rain() {
-    console.log('rain esta funcionando');
-    rainIcon.classList.toggle('cor2');
+    if (state.isMute == false) {
+        sounds.rain.pause();
+        return;
+    }
+
+    sounds.rain.play();
+    sounds.florest.pause();
+    sounds.storefront.pause();
+    sounds.flame.pause();
 }
 export function storefront() {
-    console.log('store esta funcionando');
+    if (state.isMute == false) {
+        return;
+    }
 }
 export function flame() {
-    console.log('flame esta funcionando');
+    if (state.isMute == false) {
+        return;
+    }
 }

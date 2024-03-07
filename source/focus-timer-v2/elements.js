@@ -9,3 +9,7 @@ export const seconds = document.getElementById('seconds');
 export const treeIcon = document.getElementById('tree-icon');
 
 export const rainIcon = document.getElementById('rain-icon');
+
+export const storeFrontIcon = document.getElementById('storefront-icon');
+
+export const flameIcon = document.getElementById('flame-icon');
