@@ -28,34 +28,54 @@ export function setDecrement() {
 }
 
 export function tree() {
-    if (state.isMute == false) {
+    treeIcon.classList.toggle('cor2');
+
+    if (isActive == false) {
         sounds.florest.pause();
         return;
+    } else {
+        sounds.florest.play();
+        sounds.rain.pause();
+        sounds.storefront.pause();
+        sounds.flame.pause();
     }
-
-    sounds.florest.play();
-    sounds.rain.pause();
-    sounds.storefront.pause();
-    sounds.flame.pause();
 }
 export function rain() {
-    if (state.isMute == false) {
+    rainIcon.classList.toggle('cor2');
+
+    if (isActive == false) {
         sounds.rain.pause();
         return;
+    } else {
+        sounds.florest.pause();
+        sounds.rain.play();
+        sounds.storefront.pause();
+        sounds.flame.pause();
     }
-
-    sounds.rain.play();
-    sounds.florest.pause();
-    sounds.storefront.pause();
-    sounds.flame.pause();
 }
 export function storefront() {
-    if (state.isMute == false) {
+    storeFrontIcon.classList.toggle('cor2');
+
+    if (isActive == false) {
+        sounds.storefront.pause();
         return;
+    } else {
+        sounds.florest.pause();
+        sounds.rain.pause();
+        sounds.storefront.play();
+        sounds.flame.pause();
     }
 }
 export function flame() {
-    if (state.isMute == false) {
+    flameIcon.classList.toggle('cor2');
+
+    if (isActive == false) {
+        sounds.flame.pause();
         return;
+    } else {
+        sounds.florest.pause();
+        sounds.rain.pause();
+        sounds.storefront.pause();
+        sounds.flame.play();
     }
 }
