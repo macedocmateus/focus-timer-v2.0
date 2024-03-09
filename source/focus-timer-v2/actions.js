@@ -22,64 +22,82 @@ export function setDecrement() {
 }
 
 export function tree() {
-    if (state.isMute == false) {
-        state.isMute = document.documentElement.classList.remove('music-on');
-        treeIcon.classList.remove('cor2');
-        sounds.florest.pause();
-        return;
-    } else {
-        state.isMute = document.documentElement.classList.add('music-on');
-        treeIcon.classList.add('cor2');
+    state.isMute = document.documentElement.classList.toggle('music-on');
 
+    if (state.isMute) {
         sounds.florest.play();
         sounds.rain.pause();
         sounds.storefront.pause();
         sounds.flame.pause();
 
-        rainIcon.classList.remove('cor2');
+        treeIcon.classList.add('card-actived');
+        rainIcon.classList.remove('card-actived');
+        storeFrontIcon.classList.remove('card-actived');
+        flameIcon.classList.remove('card-actived');
+
+        return;
+    } else {
+        treeIcon.classList.remove('card-actived');
+        sounds.florest.pause();
     }
 }
 export function rain() {
-    if (state.isMute == false) {
-        state.isMute = document.documentElement.classList.remove('music-on');
-        rainIcon.classList.remove('cor2');
-        sounds.rain.pause();
-        return;
-    } else {
-        state.isMute = document.documentElement.classList.add('music-on');
-        rainIcon.classList.add('cor2');
+    state.isMute = document.documentElement.classList.toggle('music-on');
 
+    if (state.isMute) {
         sounds.florest.pause();
         sounds.rain.play();
         sounds.storefront.pause();
         sounds.flame.pause();
 
-        treeIcon.classList.remove('cor2');
+        treeIcon.classList.remove('card-actived');
+        rainIcon.classList.add('card-actived');
+        storeFrontIcon.classList.remove('card-actived');
+        flameIcon.classList.remove('card-actived');
+
+        return;
+    } else {
+        rainIcon.classList.remove('card-actived');
+        sounds.rain.pause();
     }
 }
-// export function storefront() {
-//     if (state.isMute == false) {
-//         storeFrontIcon.classList.remove('cor2');
-//         sounds.storefront.pause();
-//         return;
-//     } else {
-//         storeFrontIcon.classList.add('cor2');
-//         sounds.florest.pause();
-//         sounds.rain.pause();
-//         sounds.storefront.play();
-//         sounds.flame.pause();
-//     }
-// }
-// export function flame() {
-//     if (state.isMute == false) {
-//         flameIcon.classList.remove('cor2');
-//         sounds.flame.pause();
-//         return;
-//     } else {
-//         flameIcon.classList.add('cor2');
-//         sounds.florest.pause();
-//         sounds.rain.pause();
-//         sounds.storefront.pause();
-//         sounds.flame.play();
-//     }
-// }
+export function storefront() {
+    state.isMute = document.documentElement.classList.toggle('music-on');
+
+    if (state.isMute) {
+        sounds.florest.pause();
+        sounds.rain.pause();
+        sounds.storefront.play();
+        sounds.flame.pause();
+
+        treeIcon.classList.remove('card-actived');
+        rainIcon.classList.remove('card-actived');
+        storeFrontIcon.classList.add('card-actived');
+        flameIcon.classList.remove('card-actived');
+
+        return;
+    } else {
+        storeFrontIcon.classList.remove('card-actived');
+        sounds.storefront.pause();
+    }
+}
+export function flame() {
+    state.isMute = document.documentElement.classList.toggle('music-on');
+
+    if (state.isMute) {
+        sounds.florest.pause();
+        sounds.rain.pause();
+        sounds.storefront.pause();
+        sounds.flame.play();
+
+        treeIcon.classList.remove('card-actived');
+        rainIcon.classList.remove('card-actived');
+        storeFrontIcon.classList.remove('card-actived');
+        flameIcon.classList.add('card-actived');
+
+        return;
+    } else {
+        flameIcon.classList.remove('card-actived');
+        sounds.flame.pause();
+    }
+}
