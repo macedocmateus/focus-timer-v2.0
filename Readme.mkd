@@ -27,11 +27,11 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-O focus timer versão 2 é versão atualizada do focus timer, porem, com adição de cards interativos. Clique <a href="https://focus-timer-v2-ten.vercel.app/" target="_blank">aqui</a> para testar a página.
+O focus timer versão 2 é versão atualizada do focus timer, porem, com adição de cards interativos. Clique <a href="https://focus-timer-v2-ten.vercel.app/" target="_blank" rel="noopener noreferrer">aqui</a> para testar a página.
 
 ## 🎨 Layout
 
-Clique <a href="https://www.figma.com/file/Pw8yMsK7HFkD6aISZt6gPA/Stage-05---Focus-Timer-2.0/duplicate?type=design&node-id=0-1&mode=design" target="_blank">aqui</a> para conhecer a prototipagem do projeto.
+Clique <a href="https://www.figma.com/file/Pw8yMsK7HFkD6aISZt6gPA/Stage-05---Focus-Timer-2.0/duplicate?type=design&node-id=0-1&mode=design" target="_blank" rel="noopener noreferrer">aqui</a> para conhecer a prototipagem do projeto.
 <br>
 <br>
 <br>
