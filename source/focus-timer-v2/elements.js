@@ -6,7 +6,7 @@ export const minutes = document.getElementById('minutes');
 
 export const seconds = document.getElementById('seconds');
 
-export const treeIcon = document.getElementById('tree-icon');
+export const florestIcon = document.getElementById('florest-icon');
 
 export const rainIcon = document.getElementById('rain-icon');
 

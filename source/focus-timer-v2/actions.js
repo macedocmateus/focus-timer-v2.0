@@ -1,7 +1,12 @@
 import state from './state.js';
 import * as timer from './timer.js';
 import * as sounds from './sounds.js';
-import { treeIcon, rainIcon, storeFrontIcon, flameIcon } from './elements.js';
+import {
+    florestIcon,
+    rainIcon,
+    storeFrontIcon,
+    flameIcon,
+} from './elements.js';
 export function toggleRunning() {
     state.isRunning = document.documentElement.classList.toggle('running');
     timer.countdown();
@@ -30,14 +35,14 @@ export function florest() {
         sounds.storefront.pause();
         sounds.flame.pause();
 
-        treeIcon.classList.add('card-actived');
+        florestIcon.classList.add('card-actived');
         rainIcon.classList.remove('card-actived');
         storeFrontIcon.classList.remove('card-actived');
         flameIcon.classList.remove('card-actived');
 
         return;
     } else {
-        treeIcon.classList.remove('card-actived');
+        florestIcon.classList.remove('card-actived');
         sounds.florest.pause();
     }
 }
@@ -50,7 +55,7 @@ export function rain() {
         sounds.storefront.pause();
         sounds.flame.pause();
 
-        treeIcon.classList.remove('card-actived');
+        florestIcon.classList.remove('card-actived');
         rainIcon.classList.add('card-actived');
         storeFrontIcon.classList.remove('card-actived');
         flameIcon.classList.remove('card-actived');
@@ -70,7 +75,7 @@ export function storefront() {
         sounds.storefront.play();
         sounds.flame.pause();
 
-        treeIcon.classList.remove('card-actived');
+        florestIcon.classList.remove('card-actived');
         rainIcon.classList.remove('card-actived');
         storeFrontIcon.classList.add('card-actived');
         flameIcon.classList.remove('card-actived');
@@ -90,7 +95,7 @@ export function flame() {
         sounds.storefront.pause();
         sounds.flame.play();
 
-        treeIcon.classList.remove('card-actived');
+        florestIcon.classList.remove('card-actived');
         rainIcon.classList.remove('card-actived');
         storeFrontIcon.classList.remove('card-actived');
         flameIcon.classList.add('card-actived');
