@@ -21,7 +21,7 @@ export function setDecrement() {
     timer.decrementMinutes();
 }
 
-export function tree() {
+export function florest() {
     state.isMute = document.documentElement.classList.toggle('music-on');
 
     if (state.isMute) {
